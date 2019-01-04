@@ -1,0 +1,29 @@
+{% extends "user_base.html" %}
+
+{% block title %}
+<title>CEC Manager | {{ student.first_name }}</title>
+{% endblock %}
+
+
+{% block content %}
+<article>
+    <p>First name: {{ student.first_name }}</p>
+    <p>Last name: {{ student.last_name }}</p>
+    <p>Date of birth: {{ student.date_of_birth }}</p>
+    <p>Current classroom: {{ student.classroom }}</p>
+    <p>Enrolled: {{ student.created }}</p>
+    <!--<p>Enrolled by: {{ student.created_by }}</p>--><!-- Only current user can see what entered in the system-->
+    <p><a href="{{url_for('home')}}"><button type="button" class="btn btn-secondary">Back</button></a></p>
+</article>
+{% endblock %}
+
+{% block aside %}
+<h3>Info</h3>
+<p>CEC has effectively four classrooms:</p>
+<ul>
+    <li>Caterpillars: 6 wk-6 mo</li>
+    <li>Busy Bees: 6 mo - 24 mo</li>
+    <li>Crickets: 24 mo - 36 mo</li>
+    <li>Mighty Butterflies: 36 mo - 72 mo</li>
+</ul>
+{% endblock %}

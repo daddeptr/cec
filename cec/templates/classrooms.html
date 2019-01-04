@@ -1,0 +1,31 @@
+{% extends "user_base.html" %}
+
+{% block title%}
+<h1 class="title">CEC Manager | Classrooms</h1>
+{% endblock %}
+
+
+{% block content%}
+<article>
+    <div style="padding-bottom:.5em;"><button type="button" class="btn btn-secondary">Caterpillars: 6 wk-6 mo</button></div>
+    <div style="padding-bottom:.5em;"><button type="button" class="btn btn-secondary">Busy Bees: 6 mo - 24 mo</button></div>
+    <div style="padding-bottom:.5em;"><button type="button" class="btn btn-secondary">Crickets: 24 mo - 36 mo</button></div>
+    <div style="padding-bottom:1em;"><button type="button" class="btn btn-secondary">Mighty Butterflies: 36 mo - 72 mo</button></div>
+</article>
+
+<article>
+    <div style="padding-bottom:1em;"><a href="{{url_for('enroll')}}"><button type="button" class="btn btn-primary">Enroll new student</button></a></div>
+    <div style="padding-bottom:1em;"><a href="{{url_for('upload')}}"><button type="button" class="btn btn-primary">Upload more students</button></a></div>
+</article>
+{% endblock %}
+
+{% block aside%}
+<h3>Info</h3>
+<p>CEC has effectively four classrooms:</p>
+<ul>
+    <li>Caterpillars: 6 wk-6 mo</li>
+    <li>Busy Bees: 6 mo - 24 mo</li>
+    <li>Crickets: 24 mo - 36 mo</li>
+    <li>Mighty Butterflies: 36 mo - 72 mo</li>
+</ul>
+{% endblock %}
